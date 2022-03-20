@@ -5,13 +5,13 @@ var playerMoney = 10;
 
 console.log(playerName, playerHealth, playerAttack); 
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Tumble"];
 var enemyHealth = 50;
-var enemyAttack = 100;
+var enemyAttack = 12;
 
-console.log(enemyName, enemyHealth, enemyAttack);
+//console.log(enemyName, enemyHealth, enemyAttack);
 
-var fight = function() {
+var fight = function(enemyName) {
     window.alert("The fight has begun!");
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
@@ -56,4 +56,7 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     }
 }
 
-fight();
+for(var i = 0; i < enemyNames.length; i++){
+    fight(enemyNames[i]);
+}
+//fight();
